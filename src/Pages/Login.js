@@ -26,28 +26,32 @@ export class Login extends Component {
     render() {
         const { username, password } = this.state;
         return (
-            <div>
+            <div className='loginForm'>
+                <div className='loginTitle'>
+                    Login
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <label>Username</label>
                         <input
                             type="text"
                             value={username}
                             onChange={this.handleUsernameChange}
+                            placeholder='Username/email'
                             required
                         />
                     </div>
+                    <br/>
                     <div>
-                        <label>Password</label>
                         <input
                             type="password"
                             value={password}
                             onChange={this.handlepasswordChange}
+                            placeholder='Password'
                             required
                         />
                     </div>
                     <div>
-                        <button type="submit">Login</button>
+                        <button className='loginButton' type="submit">Login</button>
                     </div>
                 </form>
             </div>
